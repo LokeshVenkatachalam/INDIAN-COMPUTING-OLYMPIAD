@@ -162,5 +162,5 @@ While taking modulo we should make sure
 Ex:
 ```c++
 int x = ((a%mod)+(b%mod))%mod;
-int y = ( ((A%mod)*(B%mod)) %mod)* (C%mod) )%mod;
+int y = ((((A%mod)*(B%mod))%mod)*(C%mod))%mod;
 ```
