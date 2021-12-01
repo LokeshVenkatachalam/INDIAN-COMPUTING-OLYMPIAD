@@ -19,7 +19,9 @@ Here we use Euclid's GCD algorithm
 #### Algorithm
 
 Step 1 : FInd max of given two numbers a,b ,Lets take a>b without loss of generality
+
 Step 2 : we are using the fact gcd(a,b)=gcd(b,a%b) if a%b !=0
+
                                gcd(a,b)=b;         if a%b =0;
 ```
 gcd(a,b)=gcd(b,a%b) if a%b !=0
