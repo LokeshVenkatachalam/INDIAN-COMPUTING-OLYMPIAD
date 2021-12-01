@@ -95,7 +95,7 @@ Way 1: finding from F[2],.....F[n], for every given n,everytime, but while calcu
                 ==>Space complexity is O(1) for one given 'n', 
             But takes more time for large number of input 
                 ==>Time Complexity: t*O(N)
-                ==>Space complexity t*O(1) 
+                ==>Space complexity: t*O(1) 
             t->no of test cases
 Way 2: finding till F[n], for the first given 'n',and then find subsquent F[i], if higher 'n' is given.
                 ==>Time Complexity: O(N)
@@ -170,18 +170,19 @@ int main()
 ##### O(LOGN code for each )
 
 We here use matrix multiplication
-
+```
 | F[n]   | = |1 1|  | F[n-1] |
 | F[n-1] | = |1 0|  | F[n-2] |
-
+```
 So we can see that 
-
+```
 | F[n]   | = { |1 1| }^ (n-1) | F[1] |
 | F[n-1] | = { |1 0| }        | F[0] |
-
+```
+```
 We can calulate powers of matrix |1 1|  in O(LOG N), using binary exponiation
                                  |1 0| 
-
+```
 ###### Binary Expon
 
 This ia a way of finding a^n in log N steps
