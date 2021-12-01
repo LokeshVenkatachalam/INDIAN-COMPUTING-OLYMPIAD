@@ -24,7 +24,9 @@ GREEDY CHOCICE PROPERTY
 The main things about DP problems is finding 
 
 1.) Finding subproblem
+
 2.) Finding equation/recursion to find solution using sub-problem
+
 3.) Intialisation of starting solution, ex:DP[0] ,etc
 
 ## PREFIX(Very useful for DP):
