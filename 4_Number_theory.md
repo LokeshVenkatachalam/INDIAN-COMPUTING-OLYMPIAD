@@ -1,6 +1,6 @@
 # Number theory
 
-### Overview
+## Overview
 
 Number theory is using properties,patterns of integers to solve problem
 
@@ -8,7 +8,7 @@ We will see how to find GCD of two numbers
 
 We also see how nth fibannoci can be found in log N time
 
-### GCD
+## GCD
 
 GCD is greatest common divisor[also known as highest common factor(HCF) ] of a set of numbers
 
@@ -16,7 +16,7 @@ In pen and paper way ,we factorise and the find GCD[HCF]
 
 Here we use Euclid's GCD algorithm
 
-##### Algorithm
+#### Algorithm
 
 Step 1 : FInd max of given two numbers a,b ,Lets take a>b without loss of generality
 Step 2 : we are using the fact gcd(a,b)=gcd(b,a%b) if a%b !=0
@@ -44,11 +44,11 @@ So from above we can see any factor that divides 'a' and 'b' divides 'a%b', and 
 So the GCD of (b,a%b)= GCD(a,b)
 ```
 
-###### Time Complexity
+##### Time Complexity
 
 It is O(log[min (a, b)])
 
-###### Working Code
+##### Working Code
 
 ```c++
 long long int gcd(long long int a,long long int b)
@@ -73,9 +73,9 @@ long long int gcd(long long int a,long long int b)
 
 
 
-### Fibannoci series
+## Fibannoci series
 
-#### Problem
+### Problem
 
 F[0]=0;
 F[1]=0;
@@ -83,7 +83,7 @@ F[n]=F[n-1]+F[n-2];
 
 We need to finf F[n],given n;
 
-###### Simple solution takes more time
+#### Simple solution takes more time
 
 This is where we find F[2],F[3],......F[n]
 This takes O(N) for finding F[N];
@@ -171,7 +171,7 @@ int main()
 ```
 
 
-##### O(LOGN code for each )
+#### O(LOGN code for each )
 
 We here use matrix multiplication
 ```
@@ -187,7 +187,7 @@ So we can see that
 We can calulate powers of matrix |1 1|  in O(LOG N), using binary exponiation
                                  |1 0| 
 ```
-###### Binary Expon
+##### Binary Expon
 
 This ia a way of finding a^n in log N steps
 
@@ -215,7 +215,7 @@ This can be done by caluculation a^(2^x) and a^n simultaneouly instead of two lo
 This is done in this problem here
 
 
-###### CODE:
+##### CODE:
 
 PROBLEM: https://www.codechef.com/IARCSJUD/problems/TILES01 
 
@@ -300,22 +300,22 @@ int main()
 }
 ```
 
-#### FINAL fibonacci analysis
+## FINAL fibonacci analysis
 
-##### BEST FOR 
-###### FInding just 1 Fibonacci : 
+### BEST FOR 
+#### FInding just 1 Fibonacci : 
 ```
 Matrix multiplication 
 -->Time Complexity  = O(LOG N)
 -->Space Complexity = O(1)
 ```
-###### Test_Cases ~ Highest_value_of_n <= 1e6
+#### Test_Cases ~ Highest_value_of_n <= 1e6
 ```
 FInding all Fibonnacci by Simple dynamic programmin(Finding all using for loop)
 -->Time complexity  = O(N), N->highest given input
 -->Space Complexity = O(N), N->highest given input
 ```
-###### When (Test_Cases << Highest_value_of_n) or (Highest_value_of_n >=1e6)
+#### When (Test_Cases << Highest_value_of_n) or (Highest_value_of_n >=1e6)
 ```
 Matrix muliplication
 -->Time complexity = T*O(LOG N)
