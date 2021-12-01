@@ -27,9 +27,9 @@ The main things about DP problems is finding
 2.) Finding equation/recursion to find solution using sub-problem
 3.) Intialisation of starting solution, ex:DP[0] ,etc
 
-### PREFIX(Very useful for DP):
+## PREFIX(Very useful for DP):
 
-#### PROBLEM
+### PROBLEM
 ```
 Given 'n' unsorted numbers ,indexed from 1
 there will be 't' queury
@@ -42,12 +42,12 @@ Subarray:  The contiuous array from x=i to x=j
 
 Subarray sum: In an array/vector: a[i]+a[i+1]+......a[j]
 
-#### Contraints
+### Contraints
 ```
 1 <= n,t <=1000000
 -1e9 <= a[i] <=1e9
 ```
-#### Solution
+### Solution
 
 The obvious solution is given i,j traverse from i to j calculate the sum
 
@@ -70,9 +70,9 @@ PRE[i-1] = a[1]+a[2]........a[i-1]
 ```
 
 
-### Example 1:
+## Example 1:
 
-#### PROBLEM
+### PROBLEM
 
 https://www.codechef.com/INOIPRAC/problems/INOI1301
 
@@ -88,23 +88,23 @@ All position he moves ie: a[i] is added to score
 
 The task is find the maximum score that possible to finally reach 0
 
-#### Solution
+### Solution
 
 Our logic is 
 
-1)let Y be position he moves from X froward ,so X<=Y<=N
+1.) let Y be position he moves from X froward ,so X<=Y<=N
 
-2) we calculate the score for all possible Y's , X<=Y<=N and then take the maximum score
+2.) we calculate the score for all possible Y's , X<=Y<=N and then take the maximum score
 
-3) Score of Particular Y= (Highest Score for reaching Y from X) + (Highest Score for reaching 0 from Y)
+3.) Score of Particular Y= (Highest Score for reaching Y from X) + (Highest Score for reaching 0 from Y)
 
-4) (Reaching 0 from Y) by backward movement is same as (Reaching Y from 0) by forward movement
+4.) (Reaching 0 from Y) by backward movement is same as (Reaching Y from 0) by forward movement
 
-5) So let us define two DP dp[i]->highest score for reaching i from 0 , dp1[i]->highest score for reaching i from X
+5.) So let us define two DP dp[i]->highest score for reaching i from 0 , dp1[i]->highest score for reaching i from X
 
-6) so subproblem the score of reaching a particular position
+6.) so subproblem the score of reaching a particular position
 
-7) Now recursion dp[i]=max(dp[i-1],dp[i-2])+a[i], dp1[i]=max(dp1[i-1],dp1[i-2])+a[i]
+7.) Now recursion dp[i]=max(dp[i-1],dp[i-2])+a[i], dp1[i]=max(dp1[i-1],dp1[i-2])+a[i]
 ```
 Reason
 
@@ -113,7 +113,7 @@ The highest score among these two are taken
 And a[i] is added because u reach the current possition
 ```
 
-8) We are initialsing
+8.) We are initialsing
 
 ```c++
 //for dp
@@ -125,7 +125,7 @@ dp[2]=a[1]+a[2];
 dp1[x]=a[x];
 dp1[x+1]=a[x]+a[x+1];
 ```
-8) now go score of Y = dp[Y]+dp1[Y]-a[Y]-a[X];
+9.) now go score of Y = dp[Y]+dp1[Y]-a[Y]-a[X];
 ```
 Reason:
 
@@ -133,7 +133,7 @@ a[Y] is counted twice in dp[Y] and dp1[Y]
 a[X] is counted in dp1[Y], it shouldn't be ,but for intialisation purposes we do
 ```
 
-9) now run a for loop from Y=X from Y<=N, and take maximum score out all scores of Y
+10.) Now run a for loop from Y=X from Y<=N, and take maximum score out all scores of Y
 
 ```c++
 int ans=-2*10000000;
@@ -142,7 +142,7 @@ for(int i=x;i<=n;i++)
     ans=max(ans,dp[i]+dp1[i]-a[i]-a[x]);
 }
 ```
-#### Code
+### Code
 
 https://github.com/LokeshVenkatachalam/INDIAN-COMPUTING-OLYMPIAD/blob/main/INOI2013_Calvins%20Game.cpp
 
