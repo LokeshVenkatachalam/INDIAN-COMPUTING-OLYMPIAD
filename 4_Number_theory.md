@@ -91,17 +91,21 @@ This takes O(N) for finding F[N];
 This can be coded in two
 
 Way 1: finding from F[2],.....F[n], for every given n,everytime, but while calculating we just store the previous two F[i]'s.   
+```
             This occupies less space O(1) for every given n;
                 ==>Space complexity is O(1) for one given 'n', 
             But takes more time for large number of input 
                 ==>Time Complexity: t*O(N)
                 ==>Space complexity: t*O(1) 
             t->no of test cases
+```
 Way 2: finding till F[n], for the first given 'n',and then find subsquent F[i], if higher 'n' is given.
+```
                 ==>Time Complexity: O(N)
                 ==>Space complexity O(N)
                 where N is the maximum  of given inputs
                 better than way 1 for large inputs in Time Complexity, here space complexity depends
+```
 Way 1 code:
 ```c++
 #include"bits/stdc++.h"
