@@ -1,5 +1,7 @@
 # INDIAN-COMPUTING-OLYMPIAD
-A repo of algorithms needed to get into IOITC
+A repo of algorithms needed to clear INOI and getting into IOITC
+
+UPD: This is based on old syllabus 
 
 https://github.com/LokeshVenkatachalam/INDIAN-COMPUTING-OLYMPIAD
 
